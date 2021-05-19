@@ -1,7 +1,7 @@
 {
-  "name": "ts-clasp-starter-pack",
+  "name": "open-orders-update",
   "version": "1.0.0",
-  "description": "Google Apps Script project starter pack with TypeScript support",
+  "description": "Project designed to update open orders when Skywise report is ready",
   "main": "build/index.js",
   "scripts": {
     "build": "rollup --config",
