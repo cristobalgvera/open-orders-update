@@ -1,17 +1,4 @@
-interface SpreadsheetStructure {
-  [spreadsheetName: string]: {
-    ID: string;
-    SHEET: {
-      PRINCIPAL: string;
-      [sheetName: string]: string;
-    };
-    COLUMN: {
-      KEY: string;
-      COMPOSED_KEY?: {[keyColumnName: string]: string};
-      [columnName: string]: string | {};
-    };
-  };
-}
+import {SpreadsheetStructure} from '../shared/interfaces/spreadsheet-structure.interface';
 
 export const SPREADSHEETS: SpreadsheetStructure = {
   IRM_BRA: {
@@ -21,8 +8,14 @@ export const SPREADSHEETS: SpreadsheetStructure = {
     },
     COLUMN: {
       KEY: 'Chave cruzamento',
-      CRITICO: 'Critico',
-      CRITICIDADE: 'CRITICIDADE',
+      COMPOSED_KEY: {
+        A_DOC_COMPRA: 'Doc Compra',
+        B_PN: 'PN',
+      },
+      TO_BE_SEARCHED: {
+        CRITICO: 'Critico',
+        CRITICIDADE: 'CRITICIDADE',
+      },
     },
   },
   IRM_SSC: {
@@ -33,10 +26,12 @@ export const SPREADSHEETS: SpreadsheetStructure = {
     COLUMN: {
       KEY: null,
       COMPOSED_KEY: {
-        PO_CODE: 'PO_Code',
-        REFERENCE_CODE: 'Reference_Code',
+        A_PO_CODE: 'PO_Code',
+        B_REFERENCE_CODE: 'Reference_Code',
       },
-      PRIORIDAD: 'Prioridad',
+      TO_BE_SEARCHED: {
+        PRIORIDAD: 'Prioridad',
+      },
     },
   },
   SOPORTE_RECOVERY: {
@@ -47,10 +42,12 @@ export const SPREADSHEETS: SpreadsheetStructure = {
     COLUMN: {
       KEY: null,
       COMPOSED_KEY: {
-        PO: 'PO/RO',
-        PART_NUMBER: 'PART NUMBER',
+        A_PO: 'PO/RO',
+        B_PART_NUMBER: 'PART NUMBER',
       },
-      FECHA: 'FECHA',
+      TO_BE_SEARCHED: {
+        FECHA: 'FECHA',
+      },
     },
   },
   FUP_T90: {
@@ -61,9 +58,10 @@ export const SPREADSHEETS: SpreadsheetStructure = {
     COLUMN: {
       KEY: 'POPN',
       COMPOSED_KEY: {
-        PO: "PO's/RC's",
-        PREF_COMPRA: 'Pref_Compra',
+        A_PO: "PO's/RC's",
+        B_PREF_COMPRA: 'Pref_Compra',
       },
+      TO_BE_SEARCHED: {},
     },
   },
 };
