@@ -61,7 +61,9 @@ export const SPREADSHEETS: SpreadsheetStructure = {
         A_PO: "PO's/RC's",
         B_PREF_COMPRA: 'Pref_Compra',
       },
-      TO_BE_SEARCHED: {},
+      TO_BE_SEARCHED: {
+        A_DATA_STUDIO: 'Data studio',
+      },
     },
   },
 };

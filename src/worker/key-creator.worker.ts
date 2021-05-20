@@ -8,9 +8,11 @@ export const KeyCreator = {
 
     const {headers} = HeaderExtractor.extractHeaders(data);
 
-    return data.map(row => [
-      key.map(columnName => row[headers[columnName]]).join(''),
-      ...row.slice(key.length),
-    ]);
+    return data
+      .map(row => [
+        key.map(columnName => row[headers[columnName]]).join(''),
+        ...row.slice(key.length),
+      ])
+      .filter(row => !!row[0]);
   },
 };

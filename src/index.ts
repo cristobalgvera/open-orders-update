@@ -1,5 +1,6 @@
 import {SPREADSHEETS} from './config/spreadsheets.config';
 import {Searcher} from './service/searcher.service';
+import {Joiner} from './worker/joiner.worker';
 
 function test() {
   const irmBraData = Searcher.getData(SPREADSHEETS.IRM_BRA);
@@ -7,10 +8,12 @@ function test() {
   const irmSscData = Searcher.getData(SPREADSHEETS.IRM_SSC);
   const soporteRecoveryData = Searcher.getData(SPREADSHEETS.SOPORTE_RECOVERY);
 
-  console.log({
-    irmBraData: irmBraData.splice(0, 3),
-    fupT90Data: fupT90Data.splice(0, 3),
-    irmSscData: irmSscData.splice(0, 3),
-    soporteRecoveryData: soporteRecoveryData.splice(0, 3),
+  const mergedData = Joiner.joinByKey({
+    irmBraData,
+    irmSscData,
+    fupT90Data,
+    soporteRecoveryData,
   });
+
+  console.log({mergedData: mergedData.splice(0, 5)});
 }
