@@ -15,5 +15,10 @@ function test() {
     soporteRecoveryData,
   });
 
-  console.log({mergedData: mergedData.splice(0, 5)});
+  const sheet = SpreadsheetApp.openById(
+    '1EIiHMc23FFEZlYHMLuN9-JuJmxoNg722x5M1Zh24Jic'
+  ).getSheetByName('Update');
+  sheet
+    .getRange(1, 1, mergedData.length, mergedData[0].length)
+    .setValues(mergedData);
 }

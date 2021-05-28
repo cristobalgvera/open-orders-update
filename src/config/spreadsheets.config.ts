@@ -47,6 +47,7 @@ export const SPREADSHEETS: SpreadsheetStructure = {
       },
       TO_BE_SEARCHED: {
         FECHA: 'FECHA',
+        SOMA_PN: 'SOMA PN',
       },
     },
   },
