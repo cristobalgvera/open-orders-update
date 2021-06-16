@@ -1,0 +1,12 @@
+import {SHEET_NAME} from '../enum/sheet.enum';
+
+export const SPREADSHEET_TO_WRITE = {
+  OPEN_ORDERS_UPDATE: {
+    ID: '1EIiHMc23FFEZlYHMLuN9-JuJmxoNg722x5M1Zh24Jic',
+    SHEET: {
+      CONSOLIDATED: SHEET_NAME.CONSOLIDATED,
+      PURCHASES: SHEET_NAME.PURCHASES,
+      REPAIRS: SHEET_NAME.REPAIRS,
+    },
+  },
+};

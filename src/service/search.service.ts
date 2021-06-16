@@ -1,11 +1,11 @@
-import {ISearcher} from '../shared/interfaces/searcher.interface';
+import {ISearchService} from '../shared/interfaces/service/search.interface';
 import {SpreadsheetInfo} from '../shared/interfaces/spreadsheet-info.interface';
 import {HeaderExtractor} from '../worker/header-extractor.worker';
 import {KeyCreator} from '../worker/key-creator.worker';
 import {SpreadsheetExtractor} from '../worker/spreadsheet-extractor.worker';
 import {ToBeSearchedFinder} from '../worker/to-be-searched-finder.worker';
 
-export const Searcher: ISearcher = {
+export const SearchService: ISearchService = {
   getData: (spreadsheetInfo: SpreadsheetInfo) => {
     const data = SpreadsheetExtractor.extractPrincipalData(spreadsheetInfo);
     const {headers} = HeaderExtractor.extractHeaders(data);

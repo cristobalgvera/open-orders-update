@@ -1,6 +1,58 @@
 import {SpreadsheetStructure} from '../shared/interfaces/spreadsheet-structure.interface';
 
-export const SPREADSHEETS: SpreadsheetStructure = {
+export const SPREADSHEET: SpreadsheetStructure = {
+  REPAIR_STATUSES: {
+    ID: '1EIiHMc23FFEZlYHMLuN9-JuJmxoNg722x5M1Zh24Jic',
+    SHEET: {
+      PRINCIPAL: 'Repairs standard statuses',
+    },
+    COLUMN: {
+      KEY: 'Hito_Radar',
+      TO_BE_SEARCHED: {
+        STATUS_STANDARD: 'Status Standard',
+      },
+    },
+  },
+  PURCHASE_STATUSES: {
+    ID: '1EIiHMc23FFEZlYHMLuN9-JuJmxoNg722x5M1Zh24Jic',
+    SHEET: {
+      PRINCIPAL: 'Purchases standard statuses',
+    },
+    COLUMN: {
+      KEY: 'FUP_STATUS_ACTUAL',
+      TO_BE_SEARCHED: {
+        STATUS_STANDARD: 'Status Standard',
+      },
+    },
+  },
+  OPEN_REPAIRS: {
+    ID: '1jub6SfL1l8e7oDa1L2GuklQHOBydqFZIbwWC9gNrCo4',
+    SHEET: {
+      PRINCIPAL: 'Actual',
+    },
+    COLUMN: {
+      KEY: 'RO_Number',
+      TO_BE_SEARCHED: {
+        PART_NUMBER: 'PART_NUMBER',
+        SERIAL_NUMBER: 'SERIAL_NUMBER',
+        HITO_RADAR: 'Hito_Radar',
+      },
+    },
+  },
+  OPEN_PURCHASES: {
+    ID: '1zuf5oNcS5-kZNR5v2pCisgXGRuu2UUqAa0bz_k5WvOM',
+    SHEET: {
+      PRINCIPAL: 'Actual',
+    },
+    COLUMN: {
+      KEY: 'Key',
+      TO_BE_SEARCHED: {
+        ORDER: 'ORDEN',
+        ORDER_LINE: 'ORDEN_LINE',
+        FUP_STATUS_ACTUAL: 'FUP_STATUS_ACTUAL',
+      },
+    },
+  },
   IRM_BRA: {
     ID: '1mesrtcwQ0nXI9V_fbrT5cFp34nfTwy7PL8ldajQc5pA',
     SHEET: {
